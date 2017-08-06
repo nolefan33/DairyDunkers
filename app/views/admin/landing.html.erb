@@ -1,7 +1,4 @@
 <% if admin_signed_in? %>
-  <% if current_admin.email = "owner@test.com" && current_admin.sign_in_count < 5 %>
-      <p class="alert alert-danger">You should change the default password for this account.</p>
-  <% end %>
   <div class="container">
     <div class="container-fluid">
       <div class="row">
