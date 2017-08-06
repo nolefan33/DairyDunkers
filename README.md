@@ -10,4 +10,4 @@ Setup:
     - I logged in as the default created postgres user and ran this command: "CREATE ROLE dairyuser WITH CREATEDB LOGIN PASSWORD 'password';",
       but I'm sure there's a way to do it through pgAdmin or something similar.
 - Run command "rake db:setup".
-- if on windows, make sure the "file" command works. It's required for paperclip.
+- if on windows, make sure the "file" command works. It's required for paperclip. I had to install this: http://gnuwin32.sourceforge.net/packages/file.htm.
