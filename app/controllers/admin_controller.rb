@@ -4,7 +4,7 @@ class AdminController < ApplicationController
     if !admin_signed_in?
       redirect_to :new_admin_session
     end
-
+    
     @cookies = Cookie.all
     @signups = SignUp.all
   end
@@ -14,6 +14,18 @@ class AdminController < ApplicationController
       head 401
     end
     
-    Admin.create({email: params[:email], password: params[:password]})
+    admin = Admin.new({email: params[:email], password: params[:password]})
+
+    respond_to do |format|
+      begin
+        if admin.save
+          format.json { render json: { status: :created } }
+        else
+          format.json { render json: { error: admin.errors, status: :unprocessable_entity } }
+        end
+      rescue Exception => e
+        format.json { render json: { error: e, status: :unprocessable_entity } }
+      end
+    end
   end
 end

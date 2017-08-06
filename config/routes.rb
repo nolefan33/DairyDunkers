@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'admin/create'
 
   get 'cookies/:id' => "cookies#show", as: :show_cookie
+  delete 'cookies/:id' => "cookies#delete", as: :delete_cookie
   post 'cookies/create'
 
   post "home/signup"

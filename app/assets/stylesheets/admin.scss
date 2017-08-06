@@ -7,3 +7,6 @@ body {
 label {
     display: block;
 }
+.cookie-row:not(:last-child) {
+    margin-bottom: 25px;
+}
