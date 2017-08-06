@@ -1,0 +1,80 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.down-arrow {
+    transition: .25s;
+    cursor: pointer;
+}
+.down-arrow:hover {
+    transform: translateY(15px);
+}
+.jumbotron {
+    background-size: cover;
+    background-position-x: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+#header .header-content {
+    display: block;
+    margin: auto;
+}
+#header .btn {
+    display: inline-block;
+    margin: 80px auto;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+#email {
+    text-align: center;
+    background: #FFA033 center center no-repeat;
+    background-size: auto 75%;
+}
+#email .h1, #email h1 {
+    color: white;
+    font-weight: bold;
+}
+#email input {
+    border-radius: 0;
+    font-size: 20px;
+    height: 44px;
+    box-shadow: none;
+}
+#about h2 {
+    color: #FFA033;
+}
+.center {
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    .jumbotron .h2, .jumbotron h2 {
+        font-size: 48px;
+        font-weight: bold;
+    }
+    #email .h1, #email h1 {
+        font-size: 60px;
+    }
+    #email input {
+        border-radius: 0;
+        font-size: 32px;
+        height: 80px;
+        box-shadow: none;
+    }
+    #email button {
+        height: 80px;
+        font-size: 26px;
+        padding: 10px 30px;
+    }
+    #header .btn {
+        font-size: 36px;
+    }
+    #about p {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    #header-logo {
+        width: 50%;
+    }
+}

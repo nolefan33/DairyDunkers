@@ -1,0 +1,9 @@
+<div class="container" id="cookie-show">
+    <div class="col-md-4 col-xs-12">
+        <%= image_tag @cookie.photo.url, width: "100%" %>
+    </div>
+    <div class="col-md-8 col-xs-12">
+        <h2 class="cookie-title"><%= @cookie.title %></h2>
+        <p class="cookie-description" style="font-size: 18px;"><%= @cookie.description %></p>
+    </div>
+</div>

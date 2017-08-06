@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DairyDunkers Admin Panel</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag    'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'devise', 'data-turbolinks-track': 'reload' %>
+    <style>
+      .alert {
+        width: 200px;
+        position: fixed;
+        bottom: 0;
+        right: calc(50% - 100px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Devise Alerts -->
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    
+    <div class="container" style="text-align: center;">
+        <div style="display: inline-block; text-align: left;">
+          <%= yield %>
+        </div>
+    </div>
+  </body>
+</html>

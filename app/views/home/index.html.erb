@@ -1,0 +1,73 @@
+<!-- HEADER -->
+<div class="jumbotron" id="header" style="background-image: url(<%= asset_path 'background-header.jpg' %>);">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 col-xs-12 center">
+        <%= image_tag "logo-header.png", width: "100%", id: "header-logo", class: "header-content" %>
+        <a href="#email" id="header-email-button" class="btn btn-primary btn-lg navbar-btn header-content"><em>Get The Cookies</em></a>
+        <%= image_tag "arrow.png", class: "down-arrow header-content" %>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="jumbotron" id="about">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="col-md-6 col-xs-12">
+        <%= image_tag "dunk-howard.jpg", width: "100%" %>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <h2>THE GREATEST DUNK OF ALL TIME</h2>
+        <p>
+          Cake lemon drops sweet roll cheesecake chupa chups jelly donut oat cake. 
+          Gummies caramels gummies gummi bears brownie jelly biscuit tart. 
+          Chupa chups lollipop halvah sweet roll dragée. 
+          Tart marzipan chupa chups wafer lollipop bonbon chupa chups bear claw. 
+          Gummi bears sweet cheesecake gingerbread cake candy canes cotton candy. 
+          Marzipan candy tootsie roll tootsie roll cookie sweet macaroon croissant halvah. 
+          Tart cake oat cake jelly-o liquorice halvah cotton candy icing lollipop.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIES -->
+<div class="jumbotron" id="cookies" style="background-image: url(<%= asset_path 'background-cookies.jpg' %>);">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <% @cookies.each do |cookie| %>
+          <%= render cookie %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGN UP -->
+<div class="jumbotron" id="email" style="background-image: url(<%= asset_path 'dunk-lebron.png' %>)">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-xs-12">
+          <h1>SIGN UP FOR COOKIES!!</h1>
+          <%= form_tag '/home/signup', id: "email-signup", remote: true do %>
+            <div class="input-group">
+              <input type="email" name="email" id="signup-email" class="form-control" placeholder="EMAIL ADDRESS">
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" id="signup-button" type="submit"><em>GET COOKIES</em></button>
+              </span>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.cookie {
+    text-align: center;
+    background-color: white;
+    padding: 15px 25px;
+    background-clip: content-box;
+}
+.cookie > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.cookie > *:last-child {
+    margin-bottom: 20px;
+}
+.cookie img {
+    max-height: 255px;
+    max-width: 75%;
+    margin-top: 20px;
+}
+.cookie .short-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cookie-title {
+    color: #FFA033;
+}
+@media screen and (max-width: 768px) {
+    .cookie {
+        padding: 7px 7px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .cookie-title {
+        font-size: 48px;
+        font-weight: bold;
+    }
+    .cookie a {
+        font-size: 24px;
+    }
+}

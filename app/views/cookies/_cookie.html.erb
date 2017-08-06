@@ -1,0 +1,6 @@
+<div class="cookie col-md-4 col-xs-6" data-cookie="<%= cookie.id %>">
+    <%= image_tag cookie.photo.url %>
+    <h2 class="cookie-title"><%= cookie.title %></h2>
+    <p class="cookie-description short-description"><%= cookie.description %></p>
+    <a href="<%= show_cookie_path cookie.id %>" type="button" class="btn btn-primary navbar-btn" style="display: block;"><em>THIS ONE!</em></a>
+</div>
